@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@types/jquery": "^3.5.33",
+    "bootstrap": "^5.3.8",
+    "chart.js": "^4.5.0",
+    "jquery": "^3.7.1",
+    "typescript": "^5.9.2"
+  }
+}
