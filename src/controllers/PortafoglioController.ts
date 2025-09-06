@@ -1,12 +1,5 @@
 import { ApiReponse } from "../models/ApiResponse.js";
-
-interface PortafoglioItem {
-    id?: number;
-    utente_id: number;
-    azione_id: number;
-    quantita: number;
-    prezzo_acquisto: number;
-}
+import { PortafoglioItem } from "../models/Portafoglio.js";
 
 class PortafoglioController {
     /**
@@ -79,29 +72,7 @@ class PortafoglioController {
         });
     }
 
-    /**
-     * Deletes a portfolio item by its ID.
-     */
-    static async delete(id: number): Promise<ApiReponse<null>> {
-        return new Promise((resolve) => {
-            $.ajax({
-                url: "router.php?action=deletePortafoglio",
-                method: "DELETE",
-                contentType: "application/json",
-                data: JSON.stringify({ id }),
-                dataType: "json",
-                success: function (data: ApiReponse<null>) {
-                    resolve(data);
-                },
-                error: function (xhr, status, errorThrown) {
-                    resolve({
-                        success: false,
-                        message: `AJAX error: ${status} - ${errorThrown}`,
-                    });
-                },
-            });
-        });
-    }
+   
 }
 
 export { PortafoglioController };

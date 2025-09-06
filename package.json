@@ -5,5 +5,8 @@
     "chart.js": "^4.5.0",
     "jquery": "^3.7.1",
     "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.9.41"
   }
 }

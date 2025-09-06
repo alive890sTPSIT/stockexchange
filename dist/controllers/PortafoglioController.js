@@ -81,30 +81,5 @@ class PortafoglioController {
             });
         });
     }
-    /**
-     * Deletes a portfolio item by its ID.
-     */
-    static delete(id) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return new Promise((resolve) => {
-                $.ajax({
-                    url: "router.php?action=deletePortafoglio",
-                    method: "DELETE",
-                    contentType: "application/json",
-                    data: JSON.stringify({ id }),
-                    dataType: "json",
-                    success: function (data) {
-                        resolve(data);
-                    },
-                    error: function (xhr, status, errorThrown) {
-                        resolve({
-                            success: false,
-                            message: `AJAX error: ${status} - ${errorThrown}`,
-                        });
-                    },
-                });
-            });
-        });
-    }
 }
 export { PortafoglioController };

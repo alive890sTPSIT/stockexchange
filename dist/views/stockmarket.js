@@ -7,7 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { Chart } from "../../node_modules/chart.js/dist/types";
+import { Chart } from 'chart.js';
+// Register the required components
 export function stockmarket() {
     const template = document.createElement("template");
     template.innerHTML = `
@@ -49,19 +50,18 @@ export function stockmarket() {
                 }]
         },
         options: {
-            responsive: true,
-            maintainAspectRatio: false,
             scales: {
                 x: {
                     title: {
                         display: true,
-                        text: 'Orario'
+                        text: 'My X-Axis Label'
                     }
                 },
                 y: {
+                    beginAtZero: true,
                     title: {
                         display: true,
-                        text: 'Prezzo (€)'
+                        text: 'My Y-Axis Label'
                     }
                 }
             }
